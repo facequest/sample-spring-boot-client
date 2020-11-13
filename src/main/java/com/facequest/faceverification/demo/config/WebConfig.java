@@ -22,8 +22,7 @@ public class WebConfig {
 
     @Bean
     @Primary
-    public Jackson2ObjectMapperBuilderCustomizer customizeJson()
-    {
+    public Jackson2ObjectMapperBuilderCustomizer customizeJson() {
         return builder -> {
 
             builder.indentOutput(true);

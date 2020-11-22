@@ -9,6 +9,7 @@ public class VerificationRequest {
     private String notes;
     private String referencePhotoFilePath;
     private String photoToBeVerifiedFilePath;
+    private String useStoredPhotoForReference = "false";
 
     /**
      * No args constructor for use in serialization
@@ -62,6 +63,13 @@ public class VerificationRequest {
         this.photoToBeVerifiedFilePath = photoToBeVerifiedFilePath;
     }
 
+    public String getUseStoredPhotoForReference() {
+        return useStoredPhotoForReference;
+    }
+
+    public void setUseStoredPhotoForReference(String useStoredPhotoForReference) {
+        this.useStoredPhotoForReference = useStoredPhotoForReference;
+    }
 
     @Override
     public String toString() {

@@ -17,9 +17,7 @@ public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
 
-        logger.info("Server is running on localhost:8080");
-
-        logger.info("Kick-starting a verification request from the code, you could as well do it from the browser");
+        logger.info("Server is running on localhost:8080, to initiate verification request, open localhost:8080/ in your browser");
 
         WebClient.create().get().uri("localhost:8080/").exchange().subscribe(response -> response.bodyToMono(String.class));
     }
